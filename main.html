@@ -1,51 +1,26 @@
 <!DOCTYPE html>
-
 <html>
-
-<head>
-	<link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
+	<head>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
 	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-		const openBtn = document.getElementById("openModal");
-const modal = document.getElementById("modal");
-const closeBtn = document.querySelector(".close-modal");
-
-// Open modal
-openBtn.addEventListener("click", () => {
-  modal.classList.add("show");
-});
-
-// Close on button click
-closeBtn.addEventListener("click", () => {
-  modal.classList.remove("show");
-});
-
-// Close on outside click
-window.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.classList.remove("show");
-  }
-});
-	</script>
-<button id="openModal">Open Modal</button>
-
-<div class="modal" id="modal">
-  <div class="modal-content">
-    
-    <div class="modal-header">
-      <h2>Modal Header</h2>
-      <button class="close-modal">&times;</button>
-    </div>
-    
-    <div class="modal-body">
-      <p>Modal Body Content</p>
-    </div>
-    
-  </div>
-</div>
-</body>
-
+	    <script type="text/javascript" src="./script.js"></script>
+		<button id="openModal">Open Modal</button>
+	
+		<div class="modal" id="modal">
+		  <div class="modal-content">
+		    
+		    <div class="modal-header">
+		      <h2>Modal Header</h2>
+		      <button class="close-modal">&times;</button>
+		    </div>
+		    
+		    <div class="modal-body">
+		      <p>Modal Body Content</p>
+		    </div>
+		    
+		  </div>
+	</div>
+	</body>
 </html>
