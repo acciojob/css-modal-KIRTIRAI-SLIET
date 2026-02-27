@@ -1,21 +1,23 @@
 //your JS code here. If required.
-const openBtn = document.getElementById("openModal");
-const modal = document.getElementById("modal");
-const closeBtn = document.querySelector(".close-modal");
+document.addEventListener("DOMContentLoaded", () => {
+  const openBtn = document.getElementById("openModal");
+  const modal = document.getElementById("modal");
+  const closeBtn = document.querySelector(".close-modal");
 
-// Open modal
-openBtn.addEventListener("click", () => {
-  modal.classList.add("show");
-});
+  // Open modal
+  openBtn.addEventListener("click", () => {
+    modal.style.display = "block";
+  });
 
-// Close on button click
-closeBtn.addEventListener("click", () => {
-  modal.classList.remove("show");
-});
+  // Close via button
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
 
-// Close on outside click
-window.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.classList.remove("show");
-  }
+  // Close when clicking outside
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
 });
